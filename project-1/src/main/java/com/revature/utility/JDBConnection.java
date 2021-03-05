@@ -43,7 +43,9 @@ public class JDBConnection {
             log.warn("WARN: Failed to load the credentials for Postgres database.");
         }
         //TODO Do not forget to close your JDBC resources with a finally block
-
+        log.info("Successful: JDBC Connection was successful.");
         return conn;
     }
+
+
 }
