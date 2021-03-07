@@ -11,6 +11,12 @@ import java.util.Properties;
 public class JDBConnection {
     private static Logger log = Logger.getLogger(JDBConnection.class);
 
+    /**
+     * getConnection() when invoked, the method will try to establish a connection to the postgres database
+     * engine on AWS. It establishes a connection using the Properties class to retrieve the DB credentials
+     * from a prop. file. Returns
+     * @return Connection conn
+     */
     public static Connection getConnection() {
 
         try {
@@ -20,21 +26,21 @@ public class JDBConnection {
             e.printStackTrace();
         }
 
-        Properties props = new Properties();
+        Properties credentials = new Properties();
 
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         Connection conn = null;
 
         try {
-            props.load(loader.getResourceAsStream("connection.properties"));
-            String url = props.getProperty("url");
-            String username = props.getProperty("username");
-            String password = props.getProperty("password");
+            credentials.load(loader.getResourceAsStream("connection.properties"));
+            String url = credentials.getProperty("url");
+            String username = credentials.getProperty("username");
+            String password = credentials.getProperty("password");
 
             try {
                 conn = DriverManager.getConnection(url, username, password);
             } catch (SQLException e) {
-                log.warn("unable to obtain a connection to the database");
+                log.warn("WARN: Unable to obtain a secured connection to the database");
             }
 
 
@@ -42,10 +48,9 @@ public class JDBConnection {
             ex.printStackTrace();
             log.warn("WARN: Failed to load the credentials for Postgres database.");
         }
-        //TODO Do not forget to close your JDBC resources with a finally block
-        log.info("Successful: JDBC Connection was successful.");
+
+        log.info("Successful: JDBC Connection was established.");
+
         return conn;
     }
-
-
 }

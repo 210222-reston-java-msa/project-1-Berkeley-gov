@@ -1,0 +1,54 @@
+2021-03-06 23:49:15 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 02:46:36 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 02:46:37 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 02:46:37 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:01:15 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:01:16 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:01:16 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:02:12 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:02:12 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:02:12 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:03:37 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:03:38 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:03:38 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:03:47 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:03:48 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:03:48 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:04:09 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:04:10 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:04:10 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:20:20 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:20:21 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:20:21 ERROR EmployeeDaoImplementation:46 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:21:46 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:21:47 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:21:47 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:51:52 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:51:53 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:51:53 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 03:52:19 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:52:20 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 03:52:20 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:00:54 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:00:55 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:00:55 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:01:34 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:01:35 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:01:35 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:02:22 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:02:23 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:02:23 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:03:02 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:03:02 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:03:02 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:07:15 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:07:16 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:07:16 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:14:54 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:14:55 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:14:55 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:18:00 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:18:01 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:18:01 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
+2021-03-07 04:22:13 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-07 04:22:14 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
