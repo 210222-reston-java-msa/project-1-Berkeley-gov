@@ -51,7 +51,7 @@ public class RequestHelper {
             response.setContentType("application/json");
 
             printWriter.println(objectMapper.writeValueAsString(employeeLoggedIn));
-            log.info("Employee: " + employeeLoggedIn.getUsername() + "has successfully logged in.");
+            log.info("Employee: " + employeeLoggedIn.getUsername() + " has successfully logged in.");
         } else {
             log.warn("WARN: Employee failed to be found on the ERS database based on credentials provided.");
             response.setStatus(204);

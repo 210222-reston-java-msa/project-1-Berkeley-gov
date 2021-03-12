@@ -13,41 +13,43 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<body class="jumbo jumbotron-fluid">
+<body>
 
-    <main class="row-fluid bg-light">
-        <section class="col-6 bg-dark">
-            <h1 class="h1">Employee Reimbursement System</h1>
-        </section>
+    <main class="container-fluid">
+        <div class="row-fluid">
+            <section class="col bg-dark">
+                <h1 class="h1">Employee Reimbursement System</h1>
+            </section>
 
-        <section class="col-6 bg-light">
-            <p class="h3">ERS Login</p>
+            <section class="col bg-light">
+                <p class="h3">ERS Login</p>
 
-            <div class="card center" style="width: 24rem;">
-                <!-- Login form fields start here -->
-                <form method="POST" action="/login" onsubmit="sendLogin(event.preventDefault())">
-                    <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
-                    <!-- Username login field -->
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
-                        <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
-                    </div>
+                <div class="card" style="width: 34rem;">
+                    <!-- Login form fields start here -->
+                    <form onsubmit="sendLogin(event.preventDefault())">
+                        <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
+                        <!-- Username login field -->
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
+                            <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
+                        </div>
 
-                    <!-- Password login field -->
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password">
-                    </div>
+                        <!-- Password login field -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
 
-                    <!-- Submit button to confirm information in form and redirect to backend via POST action -->
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
-            </div>
-        </section>
+                        <!-- Submit button to confirm information in form and redirect to backend via POST action -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
 
     </main>
+
 
     <script src="./scripts/JavaScripts/Index.js"></script>
 </body>

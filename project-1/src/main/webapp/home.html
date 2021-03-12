@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body class="container-fluid">
+<body>
     <div class="row-fluid">
         <!-- Start of the nav bar for home page Nav Bar: Row-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -45,8 +45,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" onclick="logout()">Sign out</a>
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" onclick="logout()">Sign out</a>
                     </li>
+
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
@@ -57,14 +58,23 @@
         </nav>
 
         <!-- Main is a parent element and it's a row that contains two columns 6x6 -->
-        <main class="row-fluid">
-            <section class="col-6 bg-light">
+        <main class="row">
+            <section class="col-md-6 bg-light">
                 <h1 id="welcome">Welcome to the Employee Reimbursement System <b>(ERS)</b></h1>
 
             </section>
 
-            <section class="col-6 bg-light">
-
+            <section class="col-md-6 bg-light">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </section>
 
         </main>
@@ -72,8 +82,6 @@
     </div>
 
     <script src="./scripts/JavaScripts/WelcomeUser.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

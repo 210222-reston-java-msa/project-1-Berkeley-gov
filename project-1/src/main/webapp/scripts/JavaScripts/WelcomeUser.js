@@ -1,15 +1,15 @@
-let welcome = document.getElementById("welcome");
+let welcome = document.getElementById('welcome');
 
-let userString = document.sessionStorage.getItem("currentUser");
+let username = window.sessionStorage.getItem('username');
 
-if(userString === null) {
-    window.location("http://localhost:8080/Employee_Reimbursement_System/");
+if(username == false) {
+    window.location = "http://localhost:8080/Employee_Reimbursement_System/";
 } else {
-    let currentUser = JSON.parse(userString);
-    console.log(userString);
+    let currentUser = username;
+    console.log(username);
 
     if(currentUser != null) {
-        welcome.innerHTML = `Welcome ${currentUser.firstName} ${currentUser.lastName}!`;
+        welcome.innerHTML = "Welcome " + currentUser;
     }
 }
 
@@ -20,5 +20,5 @@ function logout() {
     xhrRequest.send();
 
     sessionStorage.removeItem('currentUser');
-    window.location("http://localhost:8080/Employee_Reimbursement_System/");
+    window.location = "http://localhost:8080/Employee_Reimbursement_System/";
 }

@@ -19,12 +19,15 @@ function sendLogin() {
 
             sessionStorage.setItem('currentUser', this.responseText);
 
+            window.sessionStorage.setItem('username', loginTemplate.username);
+            window.sessionStorage.setItem('password', loginTemplate.password);
+
             window.location = "http://localhost:8080/Employee_Reimbursement_System/home.html";
 
-            console.log(sessionStorage.getItem('currentUser'));
-        }
-
-        if (this.readyState === 4 && this.status === 204) {
+            console.log(sessionStorage.getItem('username'));
+            console.log(sessionStorage.getItem('password'));
+            console.log("Employee has logged.");
+        } else if (this.readyState === 4 && this.status === 204) {
 
             console.log("failed to find user");
 
@@ -34,6 +37,5 @@ function sendLogin() {
     }
 
     xhr.open("POST", "http://localhost:8080/Employee_Reimbursement_System/login");
-
     xhr.send(JSON.stringify(loginTemplate));
 }
