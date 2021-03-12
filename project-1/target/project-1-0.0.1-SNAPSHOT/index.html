@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="description" content="Employee Reimbursement System Login Page">
+    <meta name="keywords" content="Employee Reimbursement System, ERS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Juan" content="Ramirez">
+    <title>ERS | Login Page</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles.css" type="text/css"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body class="jumbo jumbotron-fluid">
+
+    <main class="row-fluid bg-light">
+        <section class="col-6 bg-dark">
+            <h1 class="h1">Employee Reimbursement System</h1>
+        </section>
+
+        <section class="col-6 bg-light">
+            <p class="h3">ERS Login</p>
+
+            <div class="card center" style="width: 24rem;">
+                <!-- Login form fields start here -->
+                <form method="POST" action="/login">
+                    <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
+                    <!-- Username login field -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
+                        <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
+                    </div>
+
+                    <!-- Password login field -->
+                    <div class="form-group">
+                        <label for="pword">Password</label>
+                        <input type="password" class="form-control" id="pword" placeholder="Enter password">
+                    </div>
+
+                    <!-- Submit button to confirm information in form and redirect to backend via POST action -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./scripts/JavaScripts/Index.js"></script>
 </body>
 </html>

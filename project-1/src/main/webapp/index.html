@@ -13,9 +13,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<body class="container-fluid">
+<body class="jumbo jumbotron-fluid">
 
-    <main class="row bg-light">
+    <main class="row-fluid bg-light">
         <section class="col-6 bg-dark">
             <h1 class="h1">Employee Reimbursement System</h1>
         </section>
@@ -25,7 +25,7 @@
 
             <div class="card center" style="width: 24rem;">
                 <!-- Login form fields start here -->
-                <form name="loginForm" onsubmit="sendLogin(event.preventDefault())">
+                <form method="POST" action="Empl/login">
                     <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
                     <!-- Username login field -->
                     <div class="form-group">
@@ -40,11 +40,7 @@
                         <input type="password" class="form-control" id="pword" placeholder="Enter password">
                     </div>
 
-                    <!-- Accept cookies checkbox -->
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Accept cookies</label>
-                    </div>
+                    <!-- Submit button to confirm information in form and redirect to backend via POST action -->
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
@@ -53,6 +49,6 @@
 
     </main>
 
-    <script src="index.html/scripts/JavaScripts/Index.js"></script>
+    <script src="./scripts/JavaScripts/Index.js"></script>
 </body>
 </html>
