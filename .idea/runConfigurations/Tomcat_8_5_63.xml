@@ -4,7 +4,7 @@
     <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
-      <artifact name="project-1:war">
+      <artifact name="project-1:war exploded">
         <settings>
           <option name="CONTEXT_PATH" value="/Employee_Reimbursement_System" />
         </settings>
@@ -86,7 +86,7 @@
     <method v="2">
       <option name="Make" enabled="true" />
       <option name="BuildArtifacts" enabled="true">
-        <artifact name="project-1:war" />
+        <artifact name="project-1:war exploded" />
       </option>
     </method>
   </configuration>

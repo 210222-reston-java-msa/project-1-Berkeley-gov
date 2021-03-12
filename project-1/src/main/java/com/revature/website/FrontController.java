@@ -25,8 +25,20 @@ public class FrontController extends HttpServlet {
         // Switch is used to control the flow of execution and redirect the client request to the appropriate resource
         // Using the FrontController design pattern (MVC)
         switch (request.getRequestURI()) {
-            case "Employee_Reimbursement_System/login":
+            case "/login":
                 RequestHelper.processLogin(request, response);
+                break;
+
+            case "/logout":
+                RequestHelper.processLogout(request, response);
+                break;
+
+            case "/employees":
+                RequestHelper.processEmployees(request, response);
+                break;
+
+            case "/error":
+                RequestHelper.processError(request, response);
                 break;
         }
 

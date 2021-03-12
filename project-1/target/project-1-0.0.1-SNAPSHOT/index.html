@@ -25,7 +25,7 @@
 
             <div class="card center" style="width: 24rem;">
                 <!-- Login form fields start here -->
-                <form method="POST" action="/login">
+                <form method="POST" action="/login" onsubmit="sendLogin(event.preventDefault())">
                     <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
                     <!-- Username login field -->
                     <div class="form-group">
@@ -36,8 +36,8 @@
 
                     <!-- Password login field -->
                     <div class="form-group">
-                        <label for="pword">Password</label>
-                        <input type="password" class="form-control" id="pword" placeholder="Enter password">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
                     </div>
 
                     <!-- Submit button to confirm information in form and redirect to backend via POST action -->
