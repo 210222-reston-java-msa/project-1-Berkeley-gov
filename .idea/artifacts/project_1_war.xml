@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="project-1-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="maven-unit-test.war">
       <element id="artifact" artifact-name="project-1:war exploded" />
     </root>
   </artifact>

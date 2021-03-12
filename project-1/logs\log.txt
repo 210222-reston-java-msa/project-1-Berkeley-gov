@@ -1,0 +1,9 @@
+2021-03-12 08:06:10 INFO  Employee:58 - Successful: Employee username found in ERS database. 
+2021-03-12 08:16:55 INFO  Employee:58 - Successful: Employee username found in ERS database. 
+2021-03-12 08:16:55 WARN  Employee:63 - WARN: Failed to find the employee username on ERS database.
+2021-03-12 08:22:35 INFO  Employee:58 - Successful: Employee username found in ERS database. 
+2021-03-12 08:22:35 WARN  Employee:63 - WARN: Failed to find the employee username on ERS database.
+2021-03-12 08:31:19 INFO  Employee:58 - Successful: Employee username found in ERS database. 
+2021-03-12 08:31:19 WARN  Employee:63 - WARN: Failed to find the employee username on ERS database.
+2021-03-12 08:43:35 INFO  Employee:58 - Successful: Employee username found in ERS database. 
+2021-03-12 08:43:36 WARN  Employee:63 - WARN: Failed to find the employee username on ERS database.
