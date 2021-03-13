@@ -14,7 +14,7 @@ import java.util.List;
  * that need to be persisted to the database. Uses the JDBC to establish a connection to the DB,
  * and SQL postgres framework to query the postgres database engine.
  */
-public class EmployeeDaoImplementation implements EmployeDao {
+public class EmployeeDaoImplementation implements EmployeeDao {
 
     Logger log = Logger.getLogger(EmployeeDaoImplementation.class);
 
@@ -27,7 +27,7 @@ public class EmployeeDaoImplementation implements EmployeDao {
             Connection connected = JDBConnection.getConnection();
 
             // columns holds the column names of the Employee table as string values; to be used for SQL query
-            String sqlQuery = "INSERT INTO \"Employee\" username pass_word, first_name, last_name, email, user_role_id) VALUES (?, ?, ?, ?, ?, ?)";
+            String sqlQuery = "INSERT INTO \"Employee\" (username, pass_word, first_name, last_name, email, user_role_id) VALUES (?, ?, ?, ?, ?, ?)";
 
             sqlStatement = connected.prepareStatement(sqlQuery);
 
@@ -67,7 +67,7 @@ public class EmployeeDaoImplementation implements EmployeDao {
 
             Connection connection = JDBConnection.getConnection();
 
-            String sqlQuery = "UPDATE Employee SET username = ?, pass_word = ?, first_name = ?, last_name = ?, email = ? WHERE employee_id = " + employee.getId() + "";
+            String sqlQuery = "UPDATE \"Employee\" SET username = ?, pass_word = ?, first_name = ?, last_name = ?, email = ? WHERE employee_id = " + employee.getId() + "";
 
             sqlStatement = connection.prepareStatement(sqlQuery);
 
@@ -96,7 +96,7 @@ public class EmployeeDaoImplementation implements EmployeDao {
 
             Connection connection = JDBConnection.getConnection();
 
-            String sqlQuery = "DELETE FROM Employee WHERE employee_id = " + employee.getId() + "";
+            String sqlQuery = "DELETE FROM \"Employee\" WHERE employee_id = " + employee.getId() + "";
             sqlStatement = connection.prepareStatement(sqlQuery);
             sqlStatement.executeQuery();
 
@@ -119,7 +119,8 @@ public class EmployeeDaoImplementation implements EmployeDao {
 
         try {
 
-            String sqlQuery = "SELECT * FROM Employee INNER JOIN Role ON Employee.employee_id = Role.role_id";
+            String sqlQuery = "SELECT * FROM \"Employee\" INNER JOIN Role ON Employee.employee_id = Role.role_id";
+
             Connection connection = JDBConnection.getConnection();
             Statement sqlStatement = connection.createStatement();
             ResultSet sqlResults = sqlStatement.executeQuery(sqlQuery);

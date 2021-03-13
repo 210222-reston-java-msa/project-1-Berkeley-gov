@@ -1,7 +1,7 @@
 package com.revature.services;
 
 import com.revature.models.Employee;
-import com.revature.repositories.EmployeDao;
+import com.revature.repositories.EmployeeDao;
 import com.revature.repositories.EmployeeDaoImplementation;
 import org.apache.log4j.Logger;
 
@@ -14,7 +14,7 @@ import java.util.List;
 public class EmployeeService {
 
     // EmployeeDao is used throughout the EmployeeService class to provide CRUD operations to the employee service layer
-    public static EmployeDao employeeDao = new EmployeeDaoImplementation();
+    public static EmployeeDao employeeDao = new EmployeeDaoImplementation();
     public final static Logger log = Logger.getLogger(Employee.class);
 
     /**

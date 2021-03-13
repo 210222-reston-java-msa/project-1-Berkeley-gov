@@ -791,7 +791,7 @@ false posixrules
       <ObjectId>14314</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1807</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3537</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16480|16484|1
 sequence|table|16515|16517|1
@@ -894,7 +894,7 @@ default_transaction_read_only=off</Config>
       <ObjectId>16424</ObjectId>
       <StateNumber>934</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1808</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3538</IntrospectionStateNumber>
     </schema>
     <schema id="23" parent="2" name="information_schema">
       <ObjectId>14014</ObjectId>
@@ -1083,7 +1083,7 @@ UC/16394
     <table id="48" parent="22" name="Reimbursement">
       <ObjectId>16552</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1038</StateNumber>
+      <StateNumber>3536</StateNumber>
     </table>
     <table id="49" parent="22" name="Reimbursement_Status">
       <ObjectId>16517</ObjectId>
@@ -1218,10 +1218,10 @@ UC/16394
     </column>
     <column id="66" parent="48" name="reimbursement_amount">
       <Position>2</Position>
-      <DataType>integer|0s</DataType>
+      <DataType>numeric|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1038</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>3536</StateNumber>
+      <TypeId>1700</TypeId>
     </column>
     <column id="67" parent="48" name="reimbursement_submitted">
       <Position>3</Position>
@@ -1282,7 +1282,7 @@ UC/16394
     </column>
     <index id="75" parent="48" name="reimbursement_pk">
       <ObjectId>16578</ObjectId>
-      <StateNumber>1044</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1292,7 +1292,7 @@ UC/16394
     </index>
     <index id="76" parent="48" name="reimbursement_reimbursement_id_uindex">
       <ObjectId>16574</ObjectId>
-      <StateNumber>1040</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
@@ -1301,7 +1301,7 @@ UC/16394
     </index>
     <index id="77" parent="48" name="reimbursement_reimbursement_author_uindex">
       <ObjectId>16573</ObjectId>
-      <StateNumber>1039</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_author</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
@@ -1310,7 +1310,7 @@ UC/16394
     </index>
     <index id="78" parent="48" name="reimbursement_reimbursement_resolver_uindex">
       <ObjectId>16575</ObjectId>
-      <StateNumber>1041</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_resolver</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
@@ -1319,7 +1319,7 @@ UC/16394
     </index>
     <index id="79" parent="48" name="reimbursement_reimbursement_status_id_uindex">
       <ObjectId>16576</ObjectId>
-      <StateNumber>1042</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_status_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
@@ -1328,7 +1328,7 @@ UC/16394
     </index>
     <index id="80" parent="48" name="reimbursement_reimbursement_type_id_uindex">
       <ObjectId>16577</ObjectId>
-      <StateNumber>1043</StateNumber>
+      <StateNumber>3536</StateNumber>
       <ColNames>reimbursement_type_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>

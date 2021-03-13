@@ -52,3 +52,12 @@
 2021-03-07 04:18:01 ERROR EmployeeDaoImplementation:44 - WARN: Failed to execute insert employee query to the ERS database.
 2021-03-07 04:22:13 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
 2021-03-07 04:22:14 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:31:39 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:31:40 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:31:40 WARN  ReimbursementDaoImplementation:45 - WARN: The Employee's reimbursement request failed to persist to the ERS database.
+2021-03-12 22:33:20 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:33:20 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:33:20 WARN  ReimbursementDaoImplementation:45 - WARN: The Employee's reimbursement request failed to persist to the ERS database.
+2021-03-12 22:39:54 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:39:55 INFO  JDBConnection:52 - Successful: JDBC Connection was established.
+2021-03-12 22:39:55 INFO  ReimbursementDaoImplementation:40 - Successful: The Employee's reimbursement request was successfully added to the ERS database.
