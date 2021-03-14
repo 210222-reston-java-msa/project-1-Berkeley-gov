@@ -1,8 +1,6 @@
 package com.revature.repositories;
 
-import com.revature.models.Employee;
 import com.revature.models.Reimbursement;
-import com.revature.models.Role;
 import com.revature.utility.JDBConnection;
 import org.apache.log4j.Logger;
 
@@ -113,13 +111,60 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
     }
 
     @Override
+    public List<Reimbursement> findByAuthorId(int authorId) {
+
+        List<Reimbursement> employeeReimbursementList = new ArrayList<Reimbursement>();
+
+        Statement sqlStatement;
+        ResultSet sqlResults;
+
+        try {
+
+            Connection connected = JDBConnection.getConnection();
+            String sqlQuery = "SELECT * FROM \"Reimbursements\" WHERE reimbursement_author = " + authorId + "";
+
+            sqlStatement =  connected.createStatement();
+            sqlResults = sqlStatement.executeQuery(sqlQuery);
+
+            while (sqlResults.next()) {
+                int reimbursementId = sqlResults.getInt("reimbursement_id");
+                double amount = sqlResults.getDouble("reimbursement_amount");
+                Timestamp submissionDate = sqlResults.getTimestamp("reimbursement_submitted");
+                Timestamp resolvedDate = sqlResults.getTimestamp("reimbursement_resolved");
+                String description = sqlResults.getString("reimbursement_description");
+                Blob receiptPicture = sqlResults.getBlob("reimbursement_receipt");
+                int author_id = sqlResults.getInt("reimbursement_author");
+                int resolverId = sqlResults.getInt("reimbursement_resolver");
+                int statusId = sqlResults.getInt("reimbursement_status_id");
+                int typeId = sqlResults.getInt("reimbursement_type_id");
+
+                Reimbursement reimbursement = new Reimbursement(reimbursementId, amount, submissionDate, resolvedDate, description, receiptPicture, author_id, resolverId, statusId, typeId);
+                employeeReimbursementList.add(reimbursement);
+            }
+
+            log.info("Successful: All Reimbursement records for employee records were successfully retrieved from the ERS database");
+            connected.close();
+            sqlStatement.close();
+            sqlResults.close();
+        }
+        catch (SQLException e) {
+            log.warn("WARN: Failed to retrieve all the reimbursement request for employee from the ERS database.");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        return employeeReimbursementList;
+    }
+
+    @Override
     public List<Reimbursement> findAll() {
 
         List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
 
         try {
 
-            String sqlQuery = "SELECT * FROM \"Reimbursement\" INNER JOIN Role ON Employee.employee_id = Reimbursement.reimbursement_id";
+            String sqlQuery = "SELECT * FROM \"Reimbursement\" INNER JOIN \"Role\" ON \"Employee\".employee_id = \"Reimbursement\".reimbursement_id";
 
             Connection connection = JDBConnection.getConnection();
             Statement sqlStatement = connection.createStatement();

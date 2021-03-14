@@ -18,27 +18,29 @@ public class FrontController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println(request.getRequestURI());
-
-        request.getRequestURI();
+        final String URI = request.getRequestURI().replace("/Employee_Reimbursement_System/", "");
 
         // Switch is used to control the flow of execution and redirect the client request to the appropriate resource
         // Using the FrontController design pattern (MVC)
-        switch (request.getRequestURI()) {
-            case "/login":
+        switch (URI) {
+            case "login":
                 RequestHelper.processLogin(request, response);
                 break;
 
-            case "/logout":
+            case "logout":
                 RequestHelper.processLogout(request, response);
                 break;
 
-            case "/employees":
+            case "employees":
                 RequestHelper.processEmployees(request, response);
                 break;
 
-            case "/error":
+            case "error":
                 RequestHelper.processError(request, response);
+                break;
+
+            case "reimbursement":
+                RequestHelper.processReimbursementRequest(request, response);
                 break;
         }
 

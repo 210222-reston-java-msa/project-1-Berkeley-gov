@@ -1,8 +1,8 @@
 let welcome = document.getElementById('welcome');
 
-let username = window.sessionStorage.getItem('username');
+let username = sessionStorage.getItem('username');
 
-if(username == false) {
+if(username == null) {
     window.location = "http://localhost:8080/Employee_Reimbursement_System/";
 } else {
     let currentUser = username;

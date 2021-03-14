@@ -8,48 +8,65 @@
     <meta name="Juan" content="Ramirez">
     <title>ERS | Login Page</title>
 
+    <link rel="stylesheet" href="./assets/index.css" type="text/css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles.css" type="text/css"/>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <main class="container-fluid">
-        <div class="row-fluid">
-            <section class="col bg-dark">
-                <h1 class="h1">Employee Reimbursement System</h1>
-            </section>
-
-            <section class="col bg-light">
-                <p class="h3">ERS Login</p>
-
-                <div class="card" style="width: 34rem;">
-                    <!-- Login form fields start here -->
-                    <form onsubmit="sendLogin(event.preventDefault())">
-                        <!--  onSubmit=sendLogin())> sendLogin will triggers event listener js function -->
-                        <!-- Username login field -->
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
-                            <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
-                        </div>
-
-                        <!-- Password login field -->
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password">
-                        </div>
-
-                        <!-- Submit button to confirm information in form and redirect to backend via POST action -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </section>
+    <div class="container-fluid">
+        <!-- header information start -->
+        <div class="row bg-info">
+            <div class="col-fluid">
+                <h1 class="text-light h2">Employee Reimbursement System</h1>
+            </div>
         </div>
 
-    </main>
+        <!-- Login form start -->
+        <div class="row">
+            <!-- left col will display design section with image of company -->
+            <section class="col mainImage">
+            </section>
 
+            <!-- right col start; contains the login form for ERS api -->
+            <div class="col">
+                <form class="col-8 mx-auto border" onsubmit="sendLogin(event.preventDefault())">
+                    <h3 class="h4">ERS Login</h3>
+                    <div class="warningText">
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">ERS Username</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
+                        <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">ERS Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- footer start information start -->
+        <div class="row bg-info">
+            <div class="col">
+                <footer style="height: 200px">
+                    <ul></ul>
+                </footer>
+            </div>
+        </div>
+    </div>
 
     <script src="./scripts/JavaScripts/Index.js"></script>
 </body>

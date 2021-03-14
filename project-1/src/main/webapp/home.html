@@ -8,6 +8,7 @@
     <meta name="Juan" content="Ramirez">
     <title>ERS | Home Page</title>
 
+    <link rel="stylesheet" href="./assets/home.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
@@ -15,6 +16,7 @@
     <div class="row-fluid">
         <!-- Start of the nav bar for home page Nav Bar: Row-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="26" height="26" style="margin-right: 10px;"><path fill-rule="evenodd" d="M2.5 3.5c0-.133.058-.318.282-.55.227-.237.592-.484 1.1-.708C4.899 1.795 6.354 1.5 8 1.5c1.647 0 3.102.295 4.117.742.51.224.874.47 1.101.707.224.233.282.418.282.551 0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 5.205 9.646 5.5 8 5.5c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707-.224-.233-.282-.418-.282-.551zM1 3.5c0-.626.292-1.165.7-1.59.406-.422.956-.767 1.579-1.041C4.525.32 6.195 0 8 0c1.805 0 3.475.32 4.722.869.622.274 1.172.62 1.578 1.04.408.426.7.965.7 1.591v9c0 .626-.292 1.165-.7 1.59-.406.422-.956.767-1.579 1.041C11.476 15.68 9.806 16 8 16c-1.805 0-3.475-.32-4.721-.869-.623-.274-1.173-.62-1.579-1.04-.408-.426-.7-.965-.7-1.591v-9zM2.5 8V5.724c.241.15.503.286.779.407C4.525 6.68 6.195 7 8 7c1.805 0 3.475-.32 4.722-.869.275-.121.537-.257.778-.407V8c0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 9.705 9.646 10 8 10c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707C2.558 8.318 2.5 8.133 2.5 8zm0 2.225V12.5c0 .133.058.318.282.55.227.237.592.484 1.1.708 1.016.447 2.471.742 4.118.742 1.647 0 3.102-.295 4.117-.742.51-.224.874-.47 1.101-.707.224-.233.282-.418.282-.551v-2.275c-.241.15-.503.285-.778.406-1.247.549-2.917.869-4.722.869-1.805 0-3.475-.32-4.721-.869a6.236 6.236 0 01-.779-.406z"></path></svg>
             <a class="navbar-brand" href="#">Employee Reimbursement System</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,11 +31,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
+                        <a class="nav-link" href="profile.html">My Profile</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ERS Reimbursements
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,32 +54,124 @@
 
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
 
         <!-- Main is a parent element and it's a row that contains two columns 6x6 -->
         <main class="row">
-            <section class="col-md-6 bg-light">
-                <h1 id="welcome">Welcome to the Employee Reimbursement System <b>(ERS)</b></h1>
+            <section class="col bg-light">
+                <h1 id="welcome" class="col headers">Welcome</h1>
 
-            </section>
-
-            <section class="col-md-6 bg-light">
-                <div class="card">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="media">
+                    <img class="align-self-start mr-3 intropic" src="./assets/Expense.jpg" alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0">Top-aligned media</h5>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </div>
                 </div>
             </section>
 
+            <section class="col bg-light">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">
+                        ERS Basics
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Expense Reimbursement System (ERS)</h5>
+                        <p class="card-text">The ERS manages the process of reimbursing company employees for expenses incurred while on company time.
+                            <br><br>
+                            All employees have the option to submit requests for reimbursement and view their past tickets and pending requests.
+                            Finance managers approve and deny requests for expense reimbursement.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <!-- Second row containing card for how to links and filler text -->
+        <section class="row bg-light">
+
+            <!-- first column for how to links and faq questions -->
+            <aside class="col">
+                <div class="card mb-3" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="./assets/Expense.jpg" class="card-img" alt="..."/>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+
+                                <p class="card-text">This is a wider card with</p>
+
+                                <ul class="list-unstyled">
+                                    <li class="media">
+                                        <img src="..." class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">List-based media object</h6>
+                                            <a href="#">link to webpage</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="media my-4">
+                                        <img src="..." class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">List-based media object</h6>
+                                            <a href="#">link to webpage</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="..." class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">List-based media object</h6>
+                                            <a href="#">link to webpage</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="col">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+
+                            <h5 class="card-header bg-primary text-light">Reimbursement Request</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">Submit a request</h5>
+                                <p class="card-text">Create a ticket and get reimbursed for all your eligible company expenses.</p>
+                                <a href="ReimbursementForm.html" class="btn btn-primary">Create Request</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <h5 class="card-header bg-info text-light">View Request</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">View the status of Requests</h5>
+                                <p class="card-text">Check out any reimbursement request made and their status.</p>
+                                <a href="request_status.html" class="btn btn-info">View Requests</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <footer class="row bg-primary">
+            <section class="col">
+                <h2>Footer</h2>
+            </section>
+        </footer>
 
     </div>
 

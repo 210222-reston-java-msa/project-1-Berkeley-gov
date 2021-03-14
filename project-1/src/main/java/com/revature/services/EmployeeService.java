@@ -50,17 +50,18 @@ public class EmployeeService {
      * @return Employee
      */
     public static Employee findByUsername(String username) {
-        // SELECT * FROM Employee SQL Query executed; Results will be stored in a list of employee objects
-        List<Employee> employeeList = employeeDao.findAll();
+        List<Employee> all = employeeDao.findAll();
+        //List<Employee> all = findAll(); // another way to do it
 
-        for (Employee employee : employeeList) {
-            if(employee.getUsername().equals(username)) {
-                log.info("Successful: Employee username found in ERS database. ");
-                return employee;
+        for (Employee e : all) { // filtering with an enhanced for-loop!
+            if (e.getUsername().equals(username)) {
+                return e; // we return the Employee object with a matching ID
+            } else {
+                continue;   // if username doesn't match the username prop of the Employee element
+                // then continue coninue the loop to the next element.
             }
         }
 
-        log.warn("WARN: Failed to find the employee username on ERS database.");
         return null;
     }
 
@@ -71,17 +72,21 @@ public class EmployeeService {
      * @return Employee
      */
     public static Employee confirmLogin(String username, String password) {
-        // Employee is first retrieved from the ERS database by querying for it using employee's username
-        Employee employee = findByUsername(username);
 
-        // Checks if the findByUsername() method was invoked properly and that the employee object is not null
-        if (employee == null) {
-            log.warn("WARN: Failed to retrieve employee by username. Employee was set to null");
+        // we use the above method
+        Employee e = findByUsername(username);
+
+        if (e == null) {
+            log.warn("WARN: Failed to retrieve employee by username. Employee was set to null -3");
             return null;
-        } else if (employee.getPassword().equals(password)) {
-            return employee;
         }
 
-        return null;
+        if (e.getPassword().equals(password)) {
+            log.info("Successful: Employee credentials have been validated.");
+            return e;
+        } else {
+            log.warn("WARN: Failed to retrieve employee by username. Employee was set to null -2");
+            return null;
+        }
     }
 }

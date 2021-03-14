@@ -16,6 +16,7 @@
     <url-pattern>/logout</url-pattern>
     <url-pattern>/employees</url-pattern>
     <url-pattern>/error</url-pattern>
+    <url-pattern>/reimbursement</url-pattern>
   </servlet-mapping>
 
   <error-page>

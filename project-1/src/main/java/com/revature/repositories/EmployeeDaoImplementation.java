@@ -119,7 +119,7 @@ public class EmployeeDaoImplementation implements EmployeeDao {
 
         try {
 
-            String sqlQuery = "SELECT * FROM \"Employee\" INNER JOIN Role ON Employee.employee_id = Role.role_id";
+            String sqlQuery = "SELECT * FROM \"Employee\" INNER JOIN \"Role\" ON \"Employee\".employee_id = \"Role\".role_id";
 
             Connection connection = JDBConnection.getConnection();
             Statement sqlStatement = connection.createStatement();

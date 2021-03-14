@@ -11,13 +11,12 @@
     <link rel="stylesheet" href="./assets/index.css" type="text/css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles.css" type="text/css"/>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container-fluid">
         <!-- header information start -->
-        <div class="row webPrimary">
+        <div class="row bg-info">
             <div class="col-fluid">
                 <h1 class="text-light h2">Employee Reimbursement System</h1>
             </div>
@@ -31,22 +30,28 @@
 
             <!-- right col start; contains the login form for ERS api -->
             <div class="col">
-                <form class="col-8 mx-auto border">
+                <form class="col-8 mx-auto border" onsubmit="sendLogin(event.preventDefault())">
                     <h3 class="h4">ERS Login</h3>
+                    <div class="warningText">
+
+                    </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <label for="username" class="form-label">ERS Username</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
+                        <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="password" class="form-label">ERS Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
                     </div>
+
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -54,70 +59,14 @@
         </div>
 
         <!-- footer start information start -->
-        <div class="row webPrimary">
+        <div class="row bg-info">
             <div class="col">
-                <footer style="height: 150px">
-                    footer
+                <footer style="height: 200px">
+                    <ul></ul>
                 </footer>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-    <main>
-        <div class="row-fluid">
-            <section class="col-6-lg bg-dark bg-gradient">
-                <h1 class="bg-dark bg-gradient text-light">Employee Reimbursement System</h1>
-            </section>
-
-            <section class="col-6-lg bg-light">
-
-                <p class="h3">ERS Login</p>
-
-                <div class="row-fluid">
-
-                    <form style="width: 400px"; onsubmit="sendLogin(event.preventDefault())">
-
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
-                            <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-
-    </footer>
--->
 
     <script src="./scripts/JavaScripts/Index.js"></script>
 </body>
