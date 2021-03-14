@@ -55,7 +55,7 @@
         <!-- Main is a parent element and it's a row that contains two columns 6x6 -->
         <main class="row">
             <div class="col">
-                <form class="card reimbursement">
+                <form class="card reimbursement" onsubmit="submitRequest()">
                     <p class="h4">Employee Reimbursement Request</p>
                     <div class="mb-3">
                         <label for="amount" class="form-label">Purchase Amount:</label>
@@ -65,16 +65,12 @@
                         <label for="description" class="form-label">Example textarea</label>
                         <textarea class="form-control" id="description" rows="3" placeholder="Describe the item you will like to be reimbursed for."></textarea>
                     </div>
-                    <select class="custom-select mb-3">
+                    <select id="typeId" class="custom-select mb-3">
                         <option selected>How would you like to get reimbursed?</option>
-                        <option value="1">Check</option>
-                        <option value="2">Direct Deposit</option>
-                        <option value="3">Cash</option>
+                        <option value=1>Check</option>
+                        <option value=2>Direct Deposit</option>
+                        <option value=3>Cash</option>
                     </select>
-                    <div class="mb-3">
-                        <label for="date">Enter date:</label>
-                        <input class="form-control" type="date" id="date" name="date">
-                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -87,7 +83,7 @@
         </footer>
     </div>
 
-    <script src="./scripts/JavaScripts/WelcomeUser.js"></script>
+    <script src="./scripts/JavaScripts/ReimbursementRequest.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

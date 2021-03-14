@@ -44,12 +44,13 @@ public class EmployeeDaoImplementation implements EmployeeDao {
             connected.close();
             sqlStatement.close();
 
+            return true;
+
         } catch (SQLException e) {
             log.error("WARN: Failed to execute insert employee query to the ERS database.");
             e.printStackTrace();
             return false;
         }
-        return true;
     }
 
     /**
@@ -80,12 +81,13 @@ public class EmployeeDaoImplementation implements EmployeeDao {
             log.info("Successful: Employee information was successfully update to the ERS database.");
             sqlStatement.executeUpdate();
 
+            return true;
+
         } catch (SQLException e) {
             log.warn("WARN: Failed to query the employee updated information to the the ERS database");
             e.printStackTrace();
             return false;
         }
-        return true;
     }
 
     @Override
@@ -104,18 +106,18 @@ public class EmployeeDaoImplementation implements EmployeeDao {
             connection.close();
             sqlStatement.close();
 
+            return true;
+
         } catch (SQLException e) {
             log.warn("WARN: Failed to delete the employee from the ERS database.");
             e.printStackTrace();
             return false;
         }
-
-        return true;
     }
 
     @Override
     public List<Employee> findAll() {
-        List<Employee> allEmployees = new ArrayList<Employee>();
+        List<Employee> allEmployees = new ArrayList<>();
 
         try {
 
@@ -144,6 +146,8 @@ public class EmployeeDaoImplementation implements EmployeeDao {
             connection.close();
             sqlStatement.close();
             sqlResults.close();
+
+            return allEmployees;
         }
         catch (SQLException e) {
             log.warn("WARN: Failed to retrieve all the employees from the ERS database.");
@@ -151,6 +155,5 @@ public class EmployeeDaoImplementation implements EmployeeDao {
             return null;
 
         }
-        return allEmployees;
     }
 }

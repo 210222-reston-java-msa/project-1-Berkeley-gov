@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RequestHelper {
@@ -90,14 +91,14 @@ public class RequestHelper {
     // This method's purpose is to return all Employees from the DB in JSON form
     public static void processEmployees(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // 1. Set the content type to app/json because we will be sending json data back to the client, stuck alongside the response
-        log.info(EmployeeService.findAll());
+        List<Employee> employeeList = EmployeeService.findAll();
+
+        log.info(employeeList);
+
         response.setContentType("application/json");
 
-        // 2. Get a list of all Employees in the DB
-        List<Employee> allEmployees = EmployeeService.findAll();
-
         // 3. Turn the list of Java Objs into a JSON string
-        String json = objectMapper.writeValueAsString(allEmployees);
+        String json = objectMapper.writeValueAsString(employeeList.toString());
 
         // 4. Use getWriter() from the response object to return the json string
         PrintWriter printWriter = response.getWriter();
@@ -133,18 +134,15 @@ public class RequestHelper {
         String requestBodyContent = stringBuilder.toString();
         log.info(requestBodyContent);
 
+        log.info("Reimbursement received from client.");
+
         Reimbursement reimbursementRequest = objectMapper.readValue(requestBodyContent, Reimbursement.class);
-        log.info("Reimbursement received from client: " + reimbursementRequest.toString());
 
         ReimbursementService.insert(reimbursementRequest);
 
-        HttpSession session = request.getSession();
-        session.setAttribute("reimbursement", reimbursementRequest);
-
-        PrintWriter printWriter = response.getWriter();
         response.setStatus(201);
 
-        log.info("Reimbursement request made: " + reimbursementRequest.toString());
+        log.info("Reimbursement request made: " + reimbursementRequest.toString() + "");
     }
 
 }

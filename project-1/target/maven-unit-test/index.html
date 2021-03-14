@@ -30,26 +30,26 @@
 
             <!-- right col start; contains the login form for ERS api -->
             <div class="col">
-                <form class="col-8 mx-auto border" onsubmit="sendLogin(event.preventDefault())">
-                    <h3 class="h4">ERS Login</h3>
-                    <div class="warningText">
-
-                    </div>
+                <form class="col-8 card mx-auto border" onsubmit="sendLogin(event.preventDefault())">
+                    <h2 class="card-header bg-primary text-light">ERS Login</h2>
 
                     <div class="mb-3">
-                        <label for="username" class="form-label">ERS Username</label>
+                        <label for="username" class="form-label labels">ERS Username</label>
                         <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
                         <small id="usernameHelp" class="form-text text-muted">We'll never share your email or username with anyone else.</small>
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">ERS Password</label>
+                        <label for="password" class="form-label labels">ERS Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Enter password">
                     </div>
 
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+
+                    <div class="warningText">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -60,9 +60,33 @@
 
         <!-- footer start information start -->
         <div class="row bg-primary">
-            <div class="col">
-                <footer style="height: 150px">
-                    <ul></ul>
+            <div class="col footer-dark">
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 item text-light">
+                                <h3>Services</h3>
+                                <ul>
+                                    <li><a class="text-light" href="#">Web design</a></li>
+                                    <li><a class="text-light" href="#">Development</a></li>
+                                    <li><a class="text-light" href="#">Hosting</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3 item text-light">
+                                <h3>About</h3>
+                                <ul>
+                                    <li ><a class="text-light" href="#">Company</a></li>
+                                    <li><a class="text-light" href="#">Team</a></li>
+                                    <li><a class="text-light" href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 item text">
+                                <h3>The ERS Company</h3>
+                                <p class="text-light">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. tum vel in justo.</p>
+                            </div>
+                        </div>
+                        <p class="copyright">Company Name © 2018</p>
+                    </div>
                 </footer>
             </div>
         </div>

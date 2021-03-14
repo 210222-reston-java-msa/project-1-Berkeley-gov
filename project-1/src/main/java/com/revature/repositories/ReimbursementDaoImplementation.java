@@ -40,13 +40,13 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
             connected.close();
             sqlStatement.close();
 
+            return true;
+
         } catch(SQLException e) {
             log.warn("WARN: The Employee's reimbursement request failed to persist to the ERS database.");
             e.printStackTrace();
             return false;
         }
-
-        return true;
     }
 
     @Override
@@ -73,13 +73,13 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
              log.info("Successful: Reimbursement information was successfully updated to the ERS database.");
              sqlStatement.executeUpdate();
 
+             return true;
+
          } catch(SQLException e) {
              log.warn("WARN: Reimbursement information was failed to persist to the ERS database.");
              e.printStackTrace();
              return false;
          }
-
-        return true;
     }
 
     @Override
@@ -101,13 +101,13 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
             connection.close();
             sqlStatement.close();
 
+            return true;
+
         } catch (SQLException e) {
             log.warn("WARN: Failed to delete the reimbursement request from the ERS database.");
             e.printStackTrace();
             return false;
         }
-
-        return true;
     }
 
     @Override
@@ -146,6 +146,7 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
             connected.close();
             sqlStatement.close();
             sqlResults.close();
+            return employeeReimbursementList;
         }
         catch (SQLException e) {
             log.warn("WARN: Failed to retrieve all the reimbursement request for employee from the ERS database.");
@@ -154,7 +155,6 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
 
         }
 
-        return employeeReimbursementList;
     }
 
     @Override
@@ -190,6 +190,7 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
             connection.close();
             sqlStatement.close();
             sqlResults.close();
+            return reimbursementList;
         }
         catch (SQLException e) {
             log.warn("WARN: Failed to retrieve all the reimbursement request from the ERS database.");
@@ -197,6 +198,5 @@ public class ReimbursementDaoImplementation implements ReimbursementDao {
             return null;
 
         }
-        return reimbursementList;
     }
 }

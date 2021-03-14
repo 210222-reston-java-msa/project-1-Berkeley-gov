@@ -25,10 +25,12 @@ function sendLogin() {
             console.log(sessionStorage.getItem('currentUser'));
 
         }
+
         if(this.readyState === 4 && this.status === 204) {
 
             console.log("failed to find user");
         }
+
     }
 
     xhr.open("POST", "http://localhost:8080/Employee_Reimbursement_System/login");

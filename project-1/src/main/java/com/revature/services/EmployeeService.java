@@ -19,6 +19,7 @@ public class EmployeeService {
 
     /**
      * When invoked, the method will add an employee record to the ERS database.
+     *
      * @param employee
      * @return boolean
      */
@@ -28,6 +29,7 @@ public class EmployeeService {
 
     /**
      * When invoked, the update() method will update an employee's record in the ERS database.
+     *
      * @param employee
      * @return boolean
      */
@@ -37,6 +39,7 @@ public class EmployeeService {
 
     /**
      * When invoked, the findAll() method will retrieve a List of all employees from the ERS database.
+     *
      * @return List<Employee>
      */
     public static List<Employee> findAll() {
@@ -46,6 +49,7 @@ public class EmployeeService {
     /**
      * When invoked, findByUsername() will find an employee from the ERS database by using their account
      * username as a credential to validate access to the employee with the given username.
+     *
      * @param username
      * @return Employee
      */
@@ -67,25 +71,21 @@ public class EmployeeService {
 
     /**
      * When invoked, the confirmLogin() method will validate the clients login credentials against the ERS database.
+     *
      * @param username
      * @param password
      * @return Employee
      */
     public static Employee confirmLogin(String username, String password) {
-
-        // we use the above method
         Employee e = findByUsername(username);
 
         if (e == null) {
-            log.warn("WARN: Failed to retrieve employee by username. Employee was set to null -3");
             return null;
         }
 
         if (e.getPassword().equals(password)) {
-            log.info("Successful: Employee credentials have been validated.");
             return e;
         } else {
-            log.warn("WARN: Failed to retrieve employee by username. Employee was set to null -2");
             return null;
         }
     }
