@@ -14,6 +14,7 @@ function sendLogin() {
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
+
         if (this.readyState === 4 && this.status === 200) {
             console.log("Login success");
 
@@ -22,9 +23,9 @@ function sendLogin() {
             window.location = "http://localhost:8080/Employee_Reimbursement_System/home.html";
 
             console.log(sessionStorage.getItem('currentUser'));
-        }
 
-        if (this.readyState === 4 && this.status === 204) {
+        }
+        if(this.readyState === 4 && this.status === 204) {
 
             console.log("failed to find user");
         }
