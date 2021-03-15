@@ -22,8 +22,8 @@ h3 {
 }
 
 form {
-    margin: 70px 0;
-    padding: 20px 0;
+    margin: 100px 0;
+    padding: 20px 40px;
     box-shadow: 1px 1px 6px 6px rgb(240, 240, 240);
     border-radius: 5px;
 }
